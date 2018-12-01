@@ -32,9 +32,10 @@ def log_error(e):
 
 
 
-def main():
-    myURL="https://twitter.com/realDonaldTrump"
-    print(simple_get(myURL))
+def writeToFile(myURL):
+    str=simple_get(myURL)
+    f = open("URLHTML.txt", "w")
+    f.write(str)
 
 if __name__ == "__main__":
-    main()
+    writeToFile("https://twitter.com/realDonaldTrump")
