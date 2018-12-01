@@ -1,6 +1,6 @@
 # Web Scraper
 # This program was created on 12/1/18
-# Authors: Alexis Dalforno, Konstantyn Shumishyn, Justin Kelly, Samuel Gibson
+# Authors: Alexis Dalforno, Kostyantyn Shumishyn, Justin Kelly, Samuel Gibson
 
 This program uses the code library provided by Beautiful Soup: "https://www.crummy.com/software/BeautifulSoup/"
 
