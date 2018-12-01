@@ -1,15 +1,7 @@
-# Ideas for our webscraper
-# AD, KS, JK, SG
+# Web Scraper
+# This program was created on 12/1/18
+# Authors: Alexis Dalforno, Konstantyn Shumishyn, Justin Kelly, Samuel Gibson
 
-Web Scrape from Twitter
-step 1: Look for Twitter's interal HTML
-step 2: Someone should look into how sraping from Twitter is typically done
-step 3: We should get webscraping working with 1-10 tweets
-step 4: We should decide what our goal is with webscraping from Twitter
+This program uses the code library provided by Beautiful Soup: "https://www.crummy.com/software/BeautifulSoup/"
 
-
-Ideas of what we could do with Tweets:
-A list of tweets by our president
-A list of tweets that mention Santa Cruz
-A list of tweets that mention Local Hack Day
-A list of tweets that mention fantasy football
+Our group's goal with this program is to create a simple web scraper that gets information from Twitter. As of now we are not sure what we wish to do with these tweets, but for now we are web scraping The President's tweets.
