@@ -38,8 +38,8 @@ def writeToFile(myURL):
     html = BeautifulSoup(myStr, 'html.parser')
     for p in html.findAll('p', class_='tweet-text'):
          #print(p)
-         re.sub('<.*>', '', p)
-         print(p)
+         print(re.sub('<.*>', "", p))
+         #print(p)
     
     
 if __name__ == "__main__":
