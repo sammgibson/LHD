@@ -8,6 +8,7 @@ from requests import get
 from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
+import re
 
 def simple_get(url):
     try:
@@ -36,8 +37,11 @@ def writeToFile(myURL):
     myStr  = simple_get(myURL) 
     html = BeautifulSoup(myStr, 'html.parser')
     for p in html.findAll('p', class_='tweet-text'):
+         #print(p)
+         re.sub('<p*>', '', p)
          print(p)
-
+    
+    
 if __name__ == "__main__":
     writeToFile("https://twitter.com/realDonaldTrump")
 
