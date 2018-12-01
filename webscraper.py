@@ -5,10 +5,9 @@
 # Samuel Gibson
 # 12/1/18
 from requests import get
-from request.exceptions import RequestException
+from requests.exceptions import RequestException
 from contextlib import closing
 from bs4 import BeautifulSoup
-
 
 def simple_get(url):
     try:
@@ -25,7 +24,7 @@ def simple_get(url):
 def is_good_response(resp):
 	content_type = resp.headers['Content-Type'].lower()
 	return (resp.status_code == 200
-			and content_type is Not None
+			and content_type is not None
 			and content_type.find('html') > -1)
 
 def log_error(e):
@@ -34,8 +33,8 @@ def log_error(e):
 
 
 def main():
-    url = input("Please enter somthing.")
-
+    myURL="https://twitter.com/realDonaldTrump"
+    print(simple_get(myURL))
 
 if __name__ == "__main__":
     main()
