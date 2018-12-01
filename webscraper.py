@@ -38,9 +38,11 @@ def writeToFile(myURL):
     html = BeautifulSoup(myStr, 'html.parser')
     for p in html.findAll('p', class_='tweet-text'):
          #print(p)
-         print(re.sub('<.*>', "", p))
+         
          #print(p)
-    
+    str hello = "<pnedomd>"
+    str other = print(re.sub('<.*>', "", p))
+    print(other)
     
 if __name__ == "__main__":
     writeToFile("https://twitter.com/realDonaldTrump")
