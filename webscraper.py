@@ -37,7 +37,7 @@ def writeToFile(myURL):
     myStr  = simple_get(myURL) 
     html = BeautifulSoup(myStr, 'html.parser')
     for p in html.findAll('p', class_='tweet-text'):
-         other = print(re.sub('<.*?>', "", p))
+         other = re.sub('<.*?>', "", p.text)
          print(other)
     
     
