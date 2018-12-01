@@ -40,7 +40,6 @@ def writeToFile(myURL):
          other = re.sub('<.*?>', "", p.text)
          print(other)
 
-
 if __name__ == "__main__":
     writeToFile("https://twitter.com/realDonaldTrump")
 
