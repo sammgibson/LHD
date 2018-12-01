@@ -32,15 +32,15 @@ def is_good_response(resp):
 def log_error(e):
 	print(e)
 
-
-
 def writeToFile(myURL):
+    f = open("URLHTML.txt", "w")
     myStr  = simple_get(myURL)
     html = BeautifulSoup(myStr, 'html.parser')
+    tweets = []
     for p in html.findAll('p', class_='tweet-text'):
-        other = re.sub('<.*?>', "", p.text)
-        print(other)
-        print
+        tweet = re.sub('<.*?>', "", p.text)
+        f.write(tweet.encode('utf-8'))
+        f.write("\n\n")
 
 if __name__ == "__main__":
     writeToFile("https://twitter.com/realDonaldTrump")
