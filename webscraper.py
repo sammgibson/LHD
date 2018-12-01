@@ -33,9 +33,11 @@ def log_error(e):
 
 
 def writeToFile(myURL):
-    str=simple_get(myURL)
-    f = open("URLHTML.txt", "w")
-    f.write(str)
+    myStr  = simple_get(myURL) 
+    html = BeautifulSoup(myStr, 'html.parser')
+    for p in html.findAll('p', class_='tweet-text'):
+         print(p)
 
 if __name__ == "__main__":
     writeToFile("https://twitter.com/realDonaldTrump")
+
